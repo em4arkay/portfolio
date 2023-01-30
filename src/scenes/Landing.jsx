@@ -2,9 +2,16 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+// import { Resume } from "../assets/Natchanon_Danual.pdf"
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+  const downloadFile = () => {
+    const element = document.createElement("Anchorlink");
+    element.href = "../assets/Natchanon_Danual.pdf";
+    element.download = "Natchanon_Danual.pdf";
+    element.click();
+  };
 
   return (
     <section
@@ -83,11 +90,11 @@ const Landing = ({ setSelectedPage }) => {
           </AnchorLink>
           <AnchorLink
             className="rounded-r-sm bg-gradient-rainblue-h py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            onClick={() => downloadFile()}
+            href="../assets/Natchanon_Danual.pdf"
           >
             <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-sofiasans">
-              Let's talk.
+              Resume
             </div>
           </AnchorLink>
         </motion.div>

@@ -19,7 +19,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, linkGit, linkDemo }) => {
+const Project = ({ title, desc, linkGit, linkDemo }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -28,10 +28,7 @@ const Project = ({ title, linkGit, linkDemo }) => {
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-sofiasans">{title}</p>
-        <p className="font-firacode mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
-        </p>
+        <p className="font-firacode mt-7">{desc}</p>
         <div className="flex justify-center md:justify-start my-10 gap-7">
           <a
             className="hover:opacity-50 transition duration-500 text-3xl"
@@ -50,10 +47,8 @@ const Project = ({ title, linkGit, linkDemo }) => {
             <FaLink color="black" />
           </a>
         </div>
-        <FaGithub />
-        <FaLink />
       </div>
-      <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+      <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
     </motion.div>
   );
 };
@@ -100,24 +95,59 @@ const Projects = () => {
             className="flex justify-center text-center items-center p-10 bg-red
               max-w-[400px] max-h-[400px] text-2xl font-sofiasans font-semibold"
           >
-            BEAUTIFUL USER INTERFACES
+            BEGINING FROM HERE
           </div>
-          <Project title="Project 1" linkGit="https://www.google.com/" linkDemo="https://kmutt.me/hZkmEMr" />
-          <Project title="Project 2" linkGit="https://github.com/em4arkay" linkDemo="https://kmutt.me/hZkmEMr" />
+          <Project 
+            title="Robofood" 
+            desc="Robot + food delivery website (frontend only) using HTML CSS and Javascript."
+            linkGit="https://github.com/em4arkay/robofood" 
+            linkDemo="#" 
+          />
+          <Project 
+            title="Project 2" 
+            desc=""
+            linkGit="https://github.com/em4arkay" 
+            linkDemo="https://kmutt.me/hZkmEMr" 
+          />
 
           {/* ROW 2 */}
-          <Project title="Project 3" linkGit="https://www.google.com/" linkDemo="https://kmutt.me/hZkmEMr" />
-          <Project title="Project 4" linkGit="https://github.com/em4arkay" linkDemo="https://kmutt.me/hZkmEMr" />
-          <Project title="Project 5" linkGit="https://github.com/em4arkay" linkDemo="https://kmutt.me/hZkmEMr" />
+          <Project 
+            title="noisesion" 
+            desc="music is life don't you think so? this is music player website created by Rapidapi & React"
+            linkGit="https://github.com/em4arkay/noisesion" 
+            linkDemo="https://kmutt.me/hZkmEMr" 
+          />
+          <Project 
+            title="Project 4" 
+            desc=""
+            linkGit="https://github.com/em4arkay/noisesion" 
+            linkDemo="https://kmutt.me/hZkmEMr" 
+          />
+          <Project 
+            title="Project 5" 
+            desc=""
+            linkGit="https://github.com/em4arkay" 
+            linkDemo="https://kmutt.me/hZkmEMr" 
+          />
 
           {/* ROW 3 */}
-          <Project title="Project 6" linkGit="https://github.com/em4arkay" linkDemo="https://kmutt.me/hZkmEMr" />
-          <Project title="Project 7" linkGit="https://github.com/em4arkay" linkDemo="https://kmutt.me/hZkmEMr" />
+          <Project 
+            title="Project 6" 
+            desc=""
+            linkGit="https://github.com/em4arkay" 
+            linkDemo="https://kmutt.me/hZkmEMr" 
+          />
+          <Project 
+            title="Project 7" 
+            desc=""
+            linkGit="https://github.com/em4arkay" 
+            linkDemo="https://kmutt.me/hZkmEMr" 
+          />
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-sofiasans font-semibold"
           >
-            SMOOTH USER EXPERIENCE
+            LET'S GOING ON
           </div>
         </motion.div>
       </div>
