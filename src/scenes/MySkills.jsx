@@ -106,6 +106,7 @@ const MySkills = () => {
           <Skills title="html" />
           <Skills title="css" />
           <Skills title="javascript" />
+          {/* <Skills title="typescript" /> */}
           <Skills title="react-native" />
           <Skills title="vue-js" />
           <Skills title="tailwindcss" />
