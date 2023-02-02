@@ -124,9 +124,9 @@ const Projects = () => {
             linkDemo="https://kmutt.me/hZkmEMr" 
           />
           <Project 
-            title="Project 5" 
+            title="co_ok-studio" 
             desc=""
-            linkGit="https://github.com/em4arkay" 
+            linkGit="https://github.com/em4arkay/co-ok-studio" 
             linkDemo="https://kmutt.me/hZkmEMr" 
           />
 
